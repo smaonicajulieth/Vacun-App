@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "995273165744",
+    "firebase_url": "https://vacunapp-ee26b.firebaseio.com",
+    "project_id": "vacunapp-ee26b",
+    "storage_bucket": "vacunapp-ee26b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995273165744:android:9a800559ce3143ff282475",
+        "android_client_info": {
+          "package_name": "com.poli.vanucapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995273165744-p9te3ktbmu8m5scmvi8vvh6d4m8pk8d2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASeQiD7BItBBhlFYIy5KqUt3E7uVXsuaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995273165744-p9te3ktbmu8m5scmvi8vvh6d4m8pk8d2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "123095939299",
+    "firebase_url": "https://vacunapp-c14d6.firebaseio.com",
+    "project_id": "vacunapp-c14d6",
+    "storage_bucket": "vacunapp-c14d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123095939299:android:480b524f24fc7a75ffadd6",
+        "android_client_info": {
+          "package_name": "mjrs.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123095939299-7ssokoj8cl076sc03p45jdo7pk48470s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAun5EEcUO_nG1HzJnhOO2Cp6p2ZCqnQhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123095939299-7ssokoj8cl076sc03p45jdo7pk48470s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
