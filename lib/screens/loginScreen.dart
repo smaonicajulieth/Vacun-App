@@ -1,5 +1,7 @@
 import 'package:login/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase/firebase.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   static Route<dynamic> route() {
@@ -30,6 +32,7 @@ class _LoginScreenState extends State<LoginScreen>
 
   initState() {
     super.initState();
+
     controller = AnimationController(
       duration: const Duration(milliseconds: 1000),
       vsync: this,
@@ -52,7 +55,11 @@ class _LoginScreenState extends State<LoginScreen>
     );
   }
 
-  Widget loginForm() {
+  Widget loginForm() {}
+}
+//login anterior
+/*
+  Widget loginForm(){
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -136,8 +143,7 @@ class _LoginScreenState extends State<LoginScreen>
         ),
       ],
     );
-  }
-}
+ */
 
 class AnimatedLogo extends AnimatedWidget {
   static final _opacityTween = Tween<double>(begin: 0.1, end: 1.0);
