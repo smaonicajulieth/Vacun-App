@@ -1,7 +1,37 @@
 import 'package:flutter/material.dart';
-
+import 'package:login/app/auth.dart';
+import 'package:login/screens/home/authenticate.dart';
+import '';
 class HomeScreen extends StatelessWidget {
-  static Route<dynamic> route(String mensaje) {
+
+final AuthService _auth =AuthService();
+
+@override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     backgroundColor: Colors.white,
+     appBar: AppBar(
+       title: Text('VacunApp'),
+       backgroundColor: Colors.indigo,
+       elevation:  0.0,
+       actions: <Widget>[
+         FlatButton.icon(
+           icon: Icon(Icons.person),
+           label: Text('Logout'),
+           onPressed: () async{
+             await _auth.signOut();
+           },
+         )
+       ],
+     ),
+   );
+  }
+
+
+
+    //pantalla de inicio despues de login de prubea, esta vacia
+    /*
+     static Route<dynamic> route(String mensaje) {
     return MaterialPageRoute(
       builder: (context) => HomeScreen(mensaje: mensaje),
     );
@@ -36,6 +66,6 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
+    );*/
 }
+

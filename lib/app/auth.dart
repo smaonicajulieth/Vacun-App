@@ -12,8 +12,11 @@ class AuthService {
   }
   // cambios de autenticacion por STREAMs
 
-  Stream<FirebaseUser> get user {
-    return _auth.onAuthStateChanged;
+  Stream<User> get user {
+    return _auth.onAuthStateChanged
+    //  .map((FirebaseUser user ) => _userFromFirebaseUser(user)); la linea de abajo realiza lo mismo,
+    //  pasa un usuario de nuestra clase cuando hay cambios en el login o logout
+    .map(_userFromFirebaseUser);
   }
 
   //log anonimo
@@ -29,8 +32,36 @@ class AuthService {
   }
 
   //logear con email y password
+  Future signInwithEmailAndPassword(String email,String password) async {
+    try {
+      AuthResult result= await _auth.signInWithEmailAndPassword(email: email, password: password);
+      FirebaseUser user = result.user;
+      return _userFromFirebaseUser(user);
+    } catch(e){
+      print(e.toString());
+      return null;
+    }
+  }
 
   //registrarse con email y password
+  Future registerwithEmailAndPassword(String email,String password) async {
+    try {
+      AuthResult result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
+      FirebaseUser user = result.user;
+      return _userFromFirebaseUser(user);
+    } catch(e){
+      print(e.toString());
+          return null;
+    }
+  }
+  //Logout
+Future signOut() async{
+    try {
+  return await _auth.signOut();
+    } catch(e){
+      print(e.toString());
+      return null;
+    }
+}
 
-  //salida segura
 }
