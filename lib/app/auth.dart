@@ -10,6 +10,11 @@ class AuthService {
   User _userFromFirebaseUser(FirebaseUser user) {
     return user != null ? User(uid: user.uid) : null;
   }
+  // cambios de autenticacion por STREAMs
+
+  Stream<FirebaseUser> get user {
+    return _auth.onAuthStateChanged;
+  }
 
   //log anonimo
   Future SignInAnon() async {

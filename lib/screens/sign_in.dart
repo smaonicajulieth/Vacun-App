@@ -27,8 +27,8 @@ class _SignInState extends State<SignIn> {
               if (result == null) {
                 print('Error logeando');
               } else {
-                print('Logeado ');
-                print(result);
+                print('Logeado');
+                print(result.uid);
               }
             },
           )),
